@@ -29,17 +29,17 @@ const WhyChooseUs = () => {
               </h2>
               <ul className="space-y-3 mt-5 list-disc ml-4 text-[#333]">
                 <li>
-                  <span className="font-semibold">Top-Notch Equipment:</span>{" "}
-                  Work out with the latest gear and technology designed to boost
-                  your performance and enjoyment.
+                  <span className="font-bold">Top-Notch Equipment:</span> Work
+                  out with the latest gear and technology designed to boost your
+                  performance and enjoyment.
                 </li>
                 <li>
-                  <span className="font-semibold">Variety of Sports:</span>{" "}
+                  <span className="font-bold">Variety of Sports:</span>{" "}
                   Experience a wide selection of sports, from classics to the
                   latest trends, all in one place.
                 </li>
                 <li>
-                  <span className="font-semibold">Tailored Packages:</span>{" "}
+                  <span className="font-bold">Tailored Packages:</span>{" "}
                   Customize your membership or booking options to suit your
                   individual preferences and goals.
                 </li>
@@ -71,20 +71,18 @@ const WhyChooseUs = () => {
               </h2>
               <ul className="space-y-3 mt-5 list-disc ml-4 text-[#333]">
                 <li>
-                  <span className="font-semibold">
-                    Professional Assistance:
-                  </span>{" "}
+                  <span className="font-bold">Professional Assistance:</span>{" "}
                   Our knowledgeable staff is always on hand to provide
                   personalized support and insights to help you reach your
                   fitness aspirations.
                 </li>
                 <li>
-                  <span className="font-semibold">Convenient Booking:</span>{" "}
-                  Take advantage of flexible and hassle-free booking options,
-                  whether for a single session or ongoing visits.
+                  <span className="font-bold">Convenient Booking:</span> Take
+                  advantage of flexible and hassle-free booking options, whether
+                  for a single session or ongoing visits.
                 </li>
                 <li>
-                  <span className="font-semibold">Continuous Support:</span> We
+                  <span className="font-bold">Continuous Support:</span> We
                   offer ongoing assistance, including facility maintenance and
                   access to resources to ensure your experience is nothing short
                   of excellent.
