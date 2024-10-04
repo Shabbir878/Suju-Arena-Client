@@ -1,0 +1,82 @@
+[
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f1" },
+    "name": "Football Field",
+    "description": "A professional-grade football field with artificial turf, perfect for matches and practice.",
+    "pricePerHour": 100,
+    "location": "Central Park, NY",
+    "image": "https://i0.wp.com/www.actionindoorsports.com.au/stadiums/tullamarine/wp-content/uploads/sites/6/2018/04/2018-02-22-6.jpg",
+    "isDeleted": false,
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f2" },
+    "name": "Indoor Basketball Court",
+    "description": "A spacious indoor basketball court with all amenities for a great game.",
+    "pricePerHour": 80,
+    "location": "Downtown Arena, LA",
+    "image": "https://www.tarkettsportsindoor.com/wp-content/uploads/2020/03/Kenova20Baptist20Church204-1536x1152.jpg",
+    "isDeleted": false,
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f3" },
+    "name": "Tennis Court",
+    "description": "A well-maintained tennis court with lighting for evening matches.",
+    "pricePerHour": 50,
+    "location": "Greenwood Tennis Club, FL",
+    "image": "https://www.eyeofriyadh.com/news_images/2020/07/2c89e42982b70.jpg",
+    "isDeleted": false,
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f4" },
+    "name": "Swimming Pool",
+    "description": "An Olympic-size swimming pool, ideal for training and leisure.",
+    "pricePerHour": 120,
+    "location": "Ocean View Gym, CA",
+    "image": "https://i.pinimg.com/originals/87/2f/c1/872fc1fcf2a9879ac44035d2ed30d231.jpg",
+    "isDeleted": false,
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f5" },
+    "name": "Track and Field",
+    "description": "A professional track and field facility for athletics events and training.",
+    "pricePerHour": 90,
+    "location": "Athletic Stadium, TX",
+    "image": "https://www.taylorjohnson.com/wp-content/uploads/2021/07/Gately-Park-Track-Interior-1024x769.jpg",
+    "isDeleted": false,
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f6" },
+    "name": "Cricket Ground",
+    "description": "A dedicated cricket ground with professional pitch and amenities for matches.",
+    "pricePerHour": 110,
+    "location": "National Cricket Stadium, CA",
+    "image": "https://www.blenheimindoorsports.co.nz/assets/Matts-Photos/507ae5df5b/IndoorCricket1__ResizedImageWzY1MSw0MzVd.jpg",
+    "isDeleted": false,
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f7" },
+    "name": "Volleyball Court",
+    "description": "An outdoor volleyball court with sand, ideal for beach volleyball events.",
+    "pricePerHour": 50,
+    "location": "Sunset Beach, FL",
+    "image": "https://www.mateflex.com/assets/Courts/Web__FillWzI0MDAsMTA2Nl0.jpg",
+    "isDeleted": false,
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "60c72b2f5f1b2c001f1e99f8" },
+    "name": "Badminton Court",
+    "description": "A well-equipped indoor badminton court with high ceilings and lighting.",
+    "pricePerHour": 40,
+    "location": "City Sports Complex, NY",
+    "image": "https://imgmedia.lbb.in/media/2019/06/5d0b4761a59c3311a73e74f2_1561020257848.jpg",
+    "isDeleted": false,
+    "__v": 0
+  }
+]
