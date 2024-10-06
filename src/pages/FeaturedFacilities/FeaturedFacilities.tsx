@@ -3,7 +3,21 @@ import Loading from "@/components/Loading";
 import { useGetFacilityQuery } from "@/redux/api/facilitesApi/facilitesApi";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
-const FeaturedFacilities = ({ isLandingPage }) => {
+// Define the interface for a facility item
+interface Facility {
+  _id: string;
+  name: string;
+  description: string;
+  pricePerHour: number;
+  location: string;
+  image: string;
+}
+
+interface FeaturedFacilitiesProps {
+  isLandingPage: boolean;
+}
+
+const FeaturedFacilities = ({ isLandingPage }: FeaturedFacilitiesProps) => {
   const {
     data: facilityData,
     isLoading,
@@ -39,7 +53,7 @@ const FeaturedFacilities = ({ isLandingPage }) => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {displayedFacilities?.map((item) => (
+          {displayedFacilities?.map((item: Facility) => (
             <FacilityCard item={item} key={item._id} />
           ))}
         </div>

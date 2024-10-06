@@ -1,12 +1,21 @@
 import { useState, useEffect } from "react";
 
+// Define the TeamMember interface to type the fetched data
+interface TeamMember {
+  id: number;
+  image: string;
+  name: string;
+  position: string;
+}
+
 const Team = () => {
-  const [datas, setDatas] = useState([]);
+  // Use the TeamMember[] type to indicate that datas is an array of TeamMember objects
+  const [datas, setDatas] = useState<TeamMember[]>([]);
 
   useEffect(() => {
     fetch("/teamData.json")
       .then((res) => res.json())
-      .then((data) => setDatas(data));
+      .then((data: TeamMember[]) => setDatas(data)); // Type the fetched data as TeamMember[]
   }, []);
 
   return (
