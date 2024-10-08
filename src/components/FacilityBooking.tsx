@@ -28,7 +28,7 @@ const FacilityBooking = () => {
     _id,
     startDate,
   };
-  const { data: availableSlots, isLoading: avaialLoaidng } =
+  const { data: availableSlots, isLoading: availLoading } =
     useAvailableSlotsQuery(queryData, {
       skip: !id || !startDate,
     });
@@ -38,7 +38,7 @@ const FacilityBooking = () => {
     handleSubmit,
   } = useForm();
 
-  if (isLoading || avaialLoaidng) {
+  if (isLoading || availLoading) {
     return <Loading />;
   }
   if (isError) {
