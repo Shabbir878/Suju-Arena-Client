@@ -11,8 +11,7 @@ import Swal from "sweetalert2";
 const DeleteFacility = () => {
   const { data: facility, isLoading } = useGetFacilityQuery(undefined);
 
-  const [deleteFacility] =
-    useDeletedSingleFacilityMutation();
+  const [deleteFacility] = useDeletedSingleFacilityMutation();
 
   const handleDeleteItem = (item: any) => {
     console.log(item);
@@ -99,7 +98,7 @@ const DeleteFacility = () => {
                   <td>{item.name}</td>
                   <td className="">${item.pricePerHour}</td>
                   <td>
-                    <Link to={`/dashboard/updatedfac/${item._id}`}>
+                    <Link to={`/dashboard/updatedFacility/${item._id}`}>
                       <button className="btn btn-ghost btn-lg bg-orange-500">
                         <FaEdit
                           className="text-white 

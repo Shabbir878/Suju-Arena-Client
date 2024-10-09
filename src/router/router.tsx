@@ -10,7 +10,6 @@ import NotFound from "@/pages/NotFound/NotFound";
 import DashBoard from "@/components/layout/DashBoard";
 import AddFacility from "@/pages/Dashboard/AddFacility/AddFacility";
 import DeleteFacility from "@/pages/Dashboard/DeleteFacility/DeleteFacility";
-import UpdateFacility from "@/pages/Dashboard/UpdateFacility/UpdateFacility";
 import MakeAdmin from "@/pages/Dashboard/MakeAdmin/MakeAdmin";
 import AdminRoute from "./AdminRoute";
 import AboutUs from "@/pages/AboutUs/AboutUs";
@@ -20,6 +19,7 @@ import PaymentSuccess from "@/pages/Payment/PaymentSuccess";
 import Signup from "../pages/Signup/Signup";
 import Facilities from "@/pages/Facilities/Facilities";
 import MyProfile from "@/pages/Dashboard/MyProfile";
+import UpdateFacility from "@/pages/Dashboard/UpdateFacility/UpdateFacility";
 
 export const router = createBrowserRouter([
   {

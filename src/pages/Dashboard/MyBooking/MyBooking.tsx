@@ -11,16 +11,23 @@ import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const MyBooking = () => {
-  const { data: MyBooking, isLoading, isError } = useGetmyBookingQuery(undefined);
-  const [deleteBooking,] =
-    useDeletedBookingMutation();
+  const {
+    data: MyBooking,
+    isLoading,
+    isError,
+  } = useGetmyBookingQuery(undefined);
+  const [deleteBooking] = useDeletedBookingMutation();
   //    console.log(MyBooking)
 
   if (isLoading) {
     return <Loading />;
   }
   if (isError) {
-    return <p className="text-center text-[20px]">You are Admin You have No acces is this route </p>
+    return (
+      <p className="text-center text-[20px]">
+        You are Admin You have No acces is this route{" "}
+      </p>
+    );
   }
 
   const handleDeleteItem = (item: any) => {
@@ -52,7 +59,7 @@ const MyBooking = () => {
           });
           Toast.fire({
             icon: "success",
-            title: `Delete ${item?.name}  successfully`,
+            title: `Delete ${item?.facility.name}  successfully`,
           });
         } catch (error) {
           //   console.error('Delete failed:', error?.error);
@@ -60,7 +67,7 @@ const MyBooking = () => {
           Swal.fire({
             position: "top",
             icon: "error",
-            title: `Failed to delete ${item.name}`,
+            title: `Failed to delete ${item?.facility.name}`,
             showConfirmButton: false,
             timer: 1500,
           });

@@ -3,18 +3,20 @@ import { useGetMeQuery } from "@/redux/api/authApi/authApi";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useEffect } from "react";
+import Overview from "./Overview/Overview";
+import ScrollToTop from "react-scroll-to-top";
+import { LuArrowBigUpDash } from "react-icons/lu";
 
 const MyProfile = () => {
   const navigate = useNavigate();
 
-  // Destructure refetch from useGetMeQuery
   const {
     data: me,
     isLoading,
     isError,
     refetch,
   } = useGetMeQuery(undefined, {
-    refetchOnMountOrArgChange: true, // Automatically refetch when component mounts or when arguments change
+    refetchOnMountOrArgChange: true,
   });
 
   useEffect(() => {
@@ -31,7 +33,6 @@ const MyProfile = () => {
     }
   }, [isError, navigate]);
 
-  // Manual refetch function, e.g., could be triggered by a button
   const handleRefetch = () => {
     refetch();
   };
@@ -49,27 +50,27 @@ const MyProfile = () => {
   const User = me?.data;
 
   return (
-    <div className="max-w-[800px] mx-auto bg-[#FFF7E4] px-6 py-6 rounded-lg shadow-md font-Poppins mt-10">
-      <p className="text-[16px] leading-[28px] text-[#555] mb-5">
+    <div className="max-w-screen-xl mx-auto bg-[#FFF7E4] p-6 md:p-10 lg:p-12 rounded-lg shadow-md font-Poppins mt-10">
+      {" "}
+      {/* Adjusted for responsiveness */}
+      <p className="text-[16px] leading-[28px] text-[#555] mb-5 text-center">
         {formattedDate}
       </p>
-
-      <h2 className="text-3xl text-[#FF8C00] font-semibold mb-2">
+      <h2 className="text-3xl text-[#FF8C00] font-semibold mb-2 text-center">
         Welcome Back, {User?.name}
       </h2>
-      <p className="text-[16px] leading-[26px] text-[#555] mb-5">
+      <p className="text-[16px] leading-[26px] text-[#555] mb-5 text-center">
         Always stay updated with your profile.
       </p>
-
-      {/* Button to manually refetch user data */}
-      <button
-        onClick={handleRefetch}
-        className="bg-[#FF8C00] text-white px-4 py-2 rounded-md mb-4"
-      >
-        Refresh Profile
-      </button>
-
-      <div className="bg-white rounded-lg shadow-md p-6">
+      <div className="flex justify-center mb-4">
+        <button
+          onClick={handleRefetch}
+          className="bg-[#FF8C00] text-white px-4 py-2 rounded-md hover:bg-[#e07b00] transition-colors duration-200"
+        >
+          Refresh Profile
+        </button>
+      </div>
+      <div className="bg-white rounded-lg shadow-md p-6 mb-4">
         <h3 className="text-xl font-bold text-[#FF8C00] mb-4">
           Profile Information
         </h3>
@@ -88,6 +89,15 @@ const MyProfile = () => {
           </div>
         </div>
       </div>
+      {User?.role === "admin" && (
+        <div className="bg-white rounded-lg shadow-md p-6 mb-4">
+          <h3 className="text-xl font-bold text-[#FF8C00] mb-4">Overview</h3>
+          <div className="w-full">
+            <Overview />
+          </div>
+          <ScrollToTop smooth component={<LuArrowBigUpDash size={40} />} />
+        </div>
+      )}
     </div>
   );
 };

@@ -32,6 +32,7 @@ const bookingApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ["book"],
     }),
+
     availableSlots: builder.query({
       query: (data) => ({
         url: `/check-availability?date=${data.startDate}&facility=${data._id}`,

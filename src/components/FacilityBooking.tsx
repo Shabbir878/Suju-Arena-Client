@@ -28,17 +28,19 @@ const FacilityBooking = () => {
     _id,
     startDate,
   };
-  const { data: availableSlots, isLoading: availLoading } =
+
+  const { data: availableSlots, isLoading: avaialLoaidng } =
     useAvailableSlotsQuery(queryData, {
       skip: !id || !startDate,
     });
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
 
-  if (isLoading || availLoading) {
+  if (isLoading || avaialLoaidng) {
     return <Loading />;
   }
   if (isError) {
@@ -105,9 +107,9 @@ const FacilityBooking = () => {
         <div className="mt-10">
           {availableSlots?.data?.length > 0 ? (
             <div className="flex justify-center flex-col items-center">
-              {availableSlots?.data?.map((slot: any) => (
+              {availableSlots?.data?.map((slot: any, index: number) => (
                 <div
-                  key={slot?._id}
+                  key={slot?._id || index} // Fallback to index if _id is missing
                   className="bg-white shadow-md rounded-lg p-4 mb-4 w-full max-w-md text-center"
                 >
                   <p className="text-lg text-gray-800">
