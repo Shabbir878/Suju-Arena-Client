@@ -163,6 +163,13 @@ VITE_API_URL=your_backend_url
 npm run dev
 ```
 
+### Admin
+
+```
+suju@gmail.com
+Suju8788
+```
+
 ## Testing
 
 - **API Testing**: Use Postman or similar tools to test the API endpoints.
